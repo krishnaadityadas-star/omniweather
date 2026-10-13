@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniWeather // Atmospheric Telemetry Dashboard - Live Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="dashboard-header">
+    <div class="header-left">
+      <a href="../../index.html" class="back-link">← Return to Portfolio</a>
+      <span class="hud-brand">OMNIWEATHER // ATMOSPHERIC TELEMETRY</span>
+    </div>
+    <div class="header-right">
+      <span class="hud-stat">STATION: BLR_GRID_NODE</span>
+      <span class="pulse-status">● LIVE STREAM</span>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+    
+    <!-- CSS Grid Dashboard Grid Layout -->
+    <div class="weather-grid">
+      
+      <!-- Card 1: Main Weather Hero (Spans 2 columns on desktop) -->
+      <article class="grid-card main-temp-card">
+        <div class="card-meta">
+          <span class="sensor-tag">ATMOSPHERIC SENSOR 01</span>
+          <span class="live-tag">REALTIME</span>
+        </div>
+        <div class="temp-display">
+          <div class="temp-number">24<span class="temp-unit">°C</span></div>
+          <div class="condition-badge">
+            <span class="weather-icon">⚡</span>
+            <span class="weather-text">OPTIMAL IONOSPHERE · CLEAR SKY</span>
+          </div>
+        </div>
+        <div class="sensor-metrics">
+          <div class="metric">
+            <span class="label">HUMIDITY</span>
+            <span class="val">58%</span>
+          </div>
+          <div class="metric">
+            <span class="label">BAROMETER</span>
+            <span class="val">1,014 hPa</span>
+          </div>
+          <div class="metric">
+            <span class="label">DEW POINT</span>
+            <span class="val">16°C</span>
+          </div>
+          <div class="metric">
+            <span class="label">VISIBILITY</span>
+            <span class="val">10 km</span>
+          </div>
+        </div>
+        <div class="grid-code-badge">CSS Grid: grid-column: span 2</div>
+      </article>
+
+      <!-- Card 2: Wind Vector -->
+      <article class="grid-card">
+        <div class="card-meta">
+          <span class="sensor-tag">ANEMOMETER</span>
+        </div>
+        <div class="card-icon">💨</div>
+        <h3 class="metric-heading">WIND VECTOR</h3>
+        <p class="primary-value">14 <span class="unit">km/h</span></p>
+        <p class="secondary-info">DIRECTION: ENE (62°)</p>
+        <div class="gauge-bar"><div class="gauge-fill wind-fill"></div></div>
+      </article>
+
+      <!-- Card 3: UV Radiation -->
+      <article class="grid-card">
+        <div class="card-meta">
+          <span class="sensor-tag">SOLAR SENSOR</span>
+        </div>
+        <div class="card-icon">☀️</div>
+        <h3 class="metric-heading">UV RADIATION</h3>
+        <p class="primary-value">3.2 <span class="unit">INDEX</span></p>
+        <p class="secondary-info">STATUS: MODERATE (SAFE)</p>
+        <div class="gauge-bar"><div class="gauge-fill uv-fill"></div></div>
+      </article>
+
+      <!-- Card 4: Air Quality (Spans 2 columns on tablet/desktop) -->
+      <article class="grid-card aqi-card">
+        <div class="card-meta">
+          <span class="sensor-tag">PARTICULATE MATTER</span>
+          <span class="status-good">EXCELLENT</span>
+        </div>
+        <div class="aqi-split">
+          <div>
+            <h3 class="metric-heading">AIR QUALITY INDEX (AQI)</h3>
+            <p class="primary-value aqi-value">42 <span class="unit">AQI</span></p>
+            <p class="secondary-info">OPTIMAL RESPIRATORY CONDITIONS</p>
+          </div>
+          <div class="aqi-breakdown">
+            <div class="pollutant"><span>PM2.5:</span> <strong>8.4 µg/m³</strong></div>
+            <div class="pollutant"><span>PM10:</span> <strong>16.1 µg/m³</strong></div>
+            <div class="pollutant"><span>CO:</span> <strong>0.3 mg/m³</strong></div>
+            <div class="pollutant"><span>O3:</span> <strong>28 µg/m³</strong></div>
+          </div>
+        </div>
+        <div class="grid-code-badge">CSS Grid: grid-column: span 2</div>
+      </article>
+
+      <!-- Card 5: Geomagnetic Activity -->
+      <article class="grid-card">
+        <div class="card-meta">
+          <span class="sensor-tag">MAGNETOMETER</span>
+        </div>
+        <div class="card-icon">🧲</div>
+        <h3 class="metric-heading">GEOMAGNETIC FLUX</h3>
+        <p class="primary-value">Kp 1.8</p>
+        <p class="secondary-info">AURORA CHANCE: 0%</p>
+        <div class="gauge-bar"><div class="gauge-fill geo-fill"></div></div>
+      </article>
+
+      <!-- Card 6: 5-Day Planetary Forecast (Spans full grid width!) -->
+      <article class="grid-card forecast-card">
+        <div class="card-meta">
+          <span class="sensor-tag">PREDICTIVE 5-DAY PROJECTION</span>
+          <span class="grid-code-badge">repeat(5, 1fr) Grid Sub-Layout</span>
+        </div>
+        <div class="forecast-row">
+          <div class="forecast-item">
+            <span class="day">MON</span>
+            <span class="forecast-icon">☀️</span>
+            <span class="high">26°</span>
+            <span class="low">18°</span>
+          </div>
+          <div class="forecast-item active-day">
+            <span class="day">TUE</span>
+            <span class="forecast-icon">⚡</span>
+            <span class="high">28°</span>
+            <span class="low">19°</span>
+          </div>
+          <div class="forecast-item">
+            <span class="day">WED</span>
+            <span class="forecast-icon">🌤️</span>
+            <span class="high">25°</span>
+            <span class="low">17°</span>
+          </div>
+          <div class="forecast-item">
+            <span class="day">THU</span>
+            <span class="forecast-icon">🌧️</span>
+            <span class="high">24°</span>
+            <span class="low">16°</span>
+          </div>
+          <div class="forecast-item">
+            <span class="day">FRI</span>
+            <span class="forecast-icon">🌤️</span>
+            <span class="high">27°</span>
+            <span class="low">18°</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
